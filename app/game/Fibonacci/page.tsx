@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 
 const page = () => {
   let [input, setInput] = useState("");

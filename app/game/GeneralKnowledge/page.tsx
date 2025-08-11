@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import he from "he";
 type Post = {
   question: any;

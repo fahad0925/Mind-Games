@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const CounterApp = () => {
   let [game, setGame] = useState(1);
