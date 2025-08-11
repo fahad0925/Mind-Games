@@ -7,14 +7,14 @@ interface Props {
 const Hero = ({ isLoading }: Props) => {
   return (
     <>
-      <div className="flex flex-col-reverse -mt-15 sm:-mt-25 md:mt-0  md:flex-row   md:gap-12  md:justify-between  min-h-screen w-screen items-center max-md:text-center">
+      <div className="flex flex-col-reverse -mt-20  sm:-mt-25 md:mt-0  md:flex-row   md:gap-12  md:justify-between  min-h-screen w-screen items-center max-md:text-center">
         {/* Left Section - Text & Buttons */}
         <div className="w-full md:w-[50%]  xl:pl-30 lg:pl-25 md:pl-20 px-6 sm:px-10 mt-10">
           <h1 className="text-5xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-8xl font-extrabold mb-6 sm:mb-8">
             Fun Zone
           </h1>
 
-          <p className="text-md sm:text-lg tracking-wide lg:leading-8 xl:text-2xl text-left md:text-left">
+          <p className="text-sm sm:text-lg tracking-wide lg:leading-8 xl:text-2xl text-left md:text-left">
             Dive into an exciting world full of brain-teasing quizzes,
             interesting trivia, and knowledge-packed games. Challenge yourself
             with every level, test how much you really know, and unlock fun as

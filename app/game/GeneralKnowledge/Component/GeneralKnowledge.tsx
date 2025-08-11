@@ -4,7 +4,7 @@ const GeneralKnowledge = () => {
   return (
     <div
       id="game02"
-      className="flex sm:flex md:flex flex-col md:flex-row lg:flex md:justify-center md:gap-5 gap-5 md:items-center md:p-0  sm:px-4"
+      className="flex sm:flex md:flex flex-col md:flex-row lg:flex [@media(min-width:1000px)_and_(max-width:1600px)]:justify-between [@media(min-width:1000px)_and_(max-width:1600px)]:px-20 md:justify-center md:gap-5 gap-5 md:items-center md:p-0  sm:px-4"
     >
       <div className="xl:w-[30%] lg:w-[50%] lg:-ml-15 md:w-[40%]">
         <div

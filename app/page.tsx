@@ -11,7 +11,7 @@ export default function Home() {
       </div>
 
       {/* games */}
-      <div className="flex flex-col lg:p-10 gap-70 mt-30 md:mt-0">
+      <div className="flex flex-col lg:p-0 xl:p-10 gap-70 mt-30 md:mt-0">
         {/* fibonacci */}
         <div className="m-4">
           <Fibonacci />
