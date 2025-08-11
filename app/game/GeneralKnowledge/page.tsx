@@ -59,16 +59,16 @@ const page = () => {
   };
 
   return (
-    <div className="min-h-screen flex pt-30 flex-col items-center gap-15 bg-gradient-to-br from-gray-900 via-black to-gray-800">
+    <div className="min-h-screen flex pt-30 flex-col items-center gap-15 bg-gradient-to-br from-gray-900 via-black to-gray-800 px-4 sm:px-6 lg:px-8">
       <div>
-        <h1 className="text-6xl text-center font-bold animate-pulse ">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold animate-pulse">
           {gameNO == 0 ? "Welcome to General Knowledge" : "General Knowledge"}
         </h1>
       </div>
 
       {currentPage == 1 && (
-        <div className="h-70 bg-black text-center rounded-2xl  shadow-lg p-10 hover:scale-105 transition-transform duration-300 ease-in-out">
-          <h1 className="text-2xl   font-extrabold text-purple-500 drop-shadow-lg text-center mb-8">
+        <div className="w-full max-w-3xl h-auto sm:h-70 bg-black text-center rounded-2xl shadow-lg p-6 sm:p-10 hover:scale-105 transition-transform duration-300 ease-in-out">
+          <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold text-purple-500 drop-shadow-lg text-center mb-6 sm:mb-8">
             {he.decode(post?.[gameNO]?.question || "Loading...")}
           </h1>
 
@@ -77,13 +77,12 @@ const page = () => {
               onChange={(e) => setInput(e.target.value)}
               type="text"
               placeholder="Your Answer"
-              className="w-100 px-5 py-2 mt-8 mr-5 rounded-full bg-gray-900 text-white border border-purple-500 placeholder-gray-400 hover:shadow-[0_0_10px_rgba(128,0,128,0.4)] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500    transition duration-200 mb-10"
+              className="w-full sm:w-auto px-4 sm:px-5 py-2 mt-6 sm:mt-8 sm:mr-5 rounded-full bg-gray-900 text-white border border-purple-500 placeholder-gray-400 hover:shadow-[0_0_10px_rgba(128,0,128,0.4)] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition duration-200 mb-6 sm:mb-10"
             />
-
             <button
               disabled={input == ""}
               onClick={handleSubmit}
-              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
+              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 sm:px-6 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
             >
               Submit
             </button>
@@ -92,22 +91,22 @@ const page = () => {
       )}
 
       {currentPage == 2 && (
-        <div className="h-80 pt-20 bg-black text-center rounded-2xl  shadow-lg p-10 hover:scale-105 transition-transform duration-300 ease-in-out">
-          <h1 className="text-2xl   font-extrabold text-purple-500 drop-shadow-lg text-center mb-8">
+        <div className="w-full max-w-3xl h-auto sm:h-80 pt-10 sm:pt-20 bg-black text-center rounded-2xl shadow-lg p-6 sm:p-10 hover:scale-105 transition-transform duration-300 ease-in-out">
+          <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold text-purple-500 drop-shadow-lg text-center mb-6 sm:mb-8">
             {answer}
           </h1>
 
           {gameNO < post.length - 1 && (
-            <div className="">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-0">
               <button
                 onClick={handlePrevious}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold mr-5 py-2 px-3 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold sm:mr-5 py-2 px-4 sm:px-3 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
               >
                 Try Again
               </button>
               <button
                 onClick={handNext}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold  py-2 px-6 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 sm:px-6 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
               >
                 Next
               </button>
@@ -115,15 +114,15 @@ const page = () => {
           )}
 
           {gameNO == 9 && (
-            <div>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-0">
               <button
                 onClick={handlePrevious}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold mr-5 py-2 px-3 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-semibold sm:mr-5 py-2 px-4 sm:px-3 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300"
               >
                 Restart
               </button>
               <Link href={"/"}>
-                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300">
+                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-5 sm:px-6 rounded-full shadow-md hover:shadow-purple-500/50 transition duration-300">
                   Back
                 </button>
               </Link>

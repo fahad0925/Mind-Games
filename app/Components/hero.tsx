@@ -52,7 +52,7 @@ const Hero = ({ isLoading }: Props) => {
         {/* Right Section - Image */}
         <div className="w-full  sm:pt-0 md:pt-0 lg:pt-0 xl:pt-0 md:w-[45%] flex justify-center">
           <img
-            className="w-[90%]  sm:w-[80%] md:w-[95%] 2xl:w-[85%]"
+            className="w-[90%] mt-5 sm:mt-0  sm:w-[80%] md:w-[95%] 2xl:w-[85%]"
             src="brainnnn.png"
             alt="yele"
           />
